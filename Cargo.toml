@@ -1,0 +1,21 @@
+[package]
+name = "zapret-win-gui"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name"]
+description = "GUI wrapper for zapret (nfqws) on Windows"
+
+[dependencies]
+eframe = "0.28.1" 
+sysinfo = "0.30.0"
+embed-resource = "2.4.2"
+
+[build-dependencies]
+embed-resource = "2.4.2"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
